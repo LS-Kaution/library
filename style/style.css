@@ -87,3 +87,27 @@ main > p {
     font-family: 'Bebas Neue', cursive;
     font-size: 5rem;
 }
+
+footer {
+   height: 100%; 
+   max-height: 75%;
+   display: flex; 
+   justify-content: center;
+   align-items: flex-end;
+}
+
+footer > h1 {
+    font-family: sans-serif, cursive;
+    font-size: 2rem;
+}
+
+#footer-div {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+#github-logo-footer {
+    height: 5rem;
+    width: 5rem;
+}
