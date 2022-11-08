@@ -79,3 +79,11 @@ header {
     height: 5rem;
     width: 5rem;
 }
+
+main > p {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 5rem;
+}
