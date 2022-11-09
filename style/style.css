@@ -2,8 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 :root {
-    --light-header-color: #f0eef1;
+    --light-font-color: black;
+    --light-header-color: #d8d8d8;
     --light-background-color: whitesmoke;
+    --dark-font-color: whitesmoke;
+    --dark-header-color: #697477;
+    --dark-background-color: rgb(32,32,44);
 }
 
 * {
@@ -23,9 +27,10 @@ html {
 }
 
 body {
+    background-color: var(--light-background-color);
+    color: var(--light-font-color);
     height: 100vh;
     width: 100%;
-
     font-size: 1.6rem;
 }
 
@@ -35,6 +40,7 @@ header {
     width: 100%;
     padding: 1rem;
     background-color: var(--light-header-color);
+    color: var(--light-font-color);
     display: flex;
     justify-content: space-around;
     align-items: center;

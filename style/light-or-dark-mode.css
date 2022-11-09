@@ -1,0 +1,9 @@
+body.dark-mode {
+    background-color: var(--dark-background-color);
+    color: var(--dark-font-color);
+}
+
+header.dark-mode {
+    background-color: var(--dark-header-color);
+    color: var(--dark-font-color);
+}

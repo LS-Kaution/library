@@ -6,11 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/light-or-dark-mode.css">
+    <script type="module" src="script-light-dark-mode.js" defer></script>
     <title>Kaution Library</title>
 </head>
 
-<body>
-    <header>
+<body class="dark-mode">
+    <header class="dark-mode">
         <div id="logo">
             <img src="style/logo.png" alt="logo" id="png-logo">
             <h1>The Kaution Library</h1>
@@ -18,7 +20,7 @@
 
         <div id="light-or-dark-mode">
             <label for="light-or-dark-mode">Dark / Light mode:</label>
-            <button>
+            <button id="bdark">
                 <img src="style/light-or-dark-mode.png" alt="png-light-or-dark-mode" id="png-light-or-dark-mode">
             </button>
         </div>
