@@ -7,3 +7,7 @@ header.dark-mode {
     background-color: var(--dark-header-color);
     color: var(--dark-font-color);
 }
+
+main.dark-mode > button {
+    color: var(--dark-font-color);
+}
