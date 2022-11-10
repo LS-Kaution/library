@@ -2,6 +2,7 @@
     --container-background-color: #505160;
     --border-paragraph-container-color: #68829E;
     --button-read-color: green;
+    --button-unread-color: #FB6542;
     --remove-button-color: #07575B;
 }
 
@@ -43,6 +44,10 @@
     font-family: 'san-serif', cursive;
     font-size: 1.8rem;
     color: whitesmoke;
+}
+
+#button-read.unread {
+    background-color: var(--button-unread-color);
 }
 
 #button-remove {

@@ -12,13 +12,19 @@ buttonNewBook.addEventListener('click', function callForm() {
 
 
 const buttonSubmit = document.querySelector('#form')
-buttonSubmit.addEventListener('click', function(event){
-    event.preventDefault
-})
-
 buttonSubmit.addEventListener('submit', showInput)
 
-function showInput() {
+function showInput(event) {
+    
+    function preventDefault(ev){
+        let event = ev | window.event;
+        if(event.preventDefault){
+            event.preventDefault();
+        }else{
+            event.returnValue = false;
+        }
+    }
+
     let inputTitle = document.querySelector('#title').value;
     let inputAuthor = document.querySelector('#author').value;
     let inputPages = document.querySelector('#pages').value;
@@ -44,3 +50,21 @@ function Data(title, author, pages) {
     form.style.display = 'none'
     container.style.display = 'flex'
 }
+
+const buttonRead = document.querySelector('#button-read')
+buttonRead.addEventListener('click', function() {
+    buttonRead.classList.toggle('unread')
+    
+    if(buttonRead.textContent === 'Read') {
+        buttonRead.textContent = 'Unread'
+    }
+    
+    else {
+        buttonRead.textContent = 'Read'
+    }
+})
+
+const buttonRemove = document.querySelector('#button-remove')
+buttonRemove.addEventListener('click', function(){
+    container.remove()
+})
