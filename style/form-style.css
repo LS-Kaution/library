@@ -1,6 +1,7 @@
 :root {
     --form-background-color :#F98866;
     --button-submit-background-color: #89DA59;
+    --light-font-color: black;
 }
 
 #form-section {

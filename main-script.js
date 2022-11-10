@@ -1,40 +1,46 @@
-
-
 const form = document.querySelector('#form-section')
 form.style.display = 'none'
 
-
+const container = document.querySelector('#result-section')
+container.style.display = 'none'
 
 
 const buttonNewBook = document.querySelector('#button-new-book')
 buttonNewBook.addEventListener('click', function callForm() {
-    form.style.display = 'flex'    
+    form.style.display = 'flex'     
 })
 
 
-const buttonSubmit = document.querySelector('#button-submit')
-buttonSubmit.addEventListener('click', function showInput() {
+const buttonSubmit = document.querySelector('#form')
+buttonSubmit.addEventListener('click', function(event){
+    event.preventDefault
+})
+
+buttonSubmit.addEventListener('submit', showInput)
+
+function showInput() {
     let inputTitle = document.querySelector('#title').value;
     let inputAuthor = document.querySelector('#author').value;
     let inputPages = document.querySelector('#pages').value;
     let inputCheck = document.querySelector('#check').checked;
 
-    alert(inputTitle)
-    alert(inputAuthor)
-    alert(inputPages)
-    alert(inputCheck)
+    let newBook = new Data(inputTitle, inputAuthor, inputPages)
+}
 
-    form.style.display = 'none'
-})
-
-
-let Data = function xd(title, author, pages, check) {
+function Data(title, author, pages) {
     this.title = title;
     this.author = author;
     this.pages = pages;
-    this.check = check;
+
+    const titleContainer = document.querySelector('#title-container')
+    titleContainer.textContent = title
+
+    const authorContainer = document.querySelector('#author-container')
+    authorContainer.textContent = author
+
+    const pagesContainer = document.querySelector('#pages-container')
+    pagesContainer.textContent = pages 
+    
+    form.style.display = 'none'
+    container.style.display = 'flex'
 }
-
-
-let data1 = new Data('xd', 'dx', '123')
-console.log(data1) 

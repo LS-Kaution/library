@@ -40,7 +40,7 @@
         </div>
 
         <section id="form-section">
-            <form action="#" method="get" id="form">
+            <form id="form">
 
                 <input type="text" name="title" placeholder="Title" id="title" required>
 
@@ -53,7 +53,7 @@
                     <label for="pages">Read this book?</label>
                 </div>
 
-                <button id="button-submit">Submit</button>
+                <input type="submit" name="submit" id="button-submit"/>
 
             </form>
         </section>
@@ -61,12 +61,12 @@
         <section id="result-section">
             <div id="result">
 
-                <p class="p-border"></p>
-                <p class="p-border"></p>
-                <p class="p-border"></p>
+                <p class="p" id="title-container"></p>
+                <p class="p" id="author-container"></p>
+                <p class="p" id="pages-container"></p>
 
                 <button id="button-read">Read</button>
-                <button id="button-remove">Remove</button>
+                <button ><img src="style/png-thrash.png" alt="png-thrash" id="button-remove"></button>
 
             </div>
         </section>
