@@ -1,0 +1,65 @@
+:root {
+    --form-background-color :#F98866;
+    --button-submit-background-color: #89DA59;
+}
+
+#form-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#form {
+    height: 34rem;
+    width: 30rem;    
+    padding: 3rem;
+    border: solid black 0.2rem;
+    border-radius: 1rem;
+    background-color: var(--form-background-color);
+    color: var(--light-font-color);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+#form > input {
+    padding: 1.5rem;
+    border: solid black 0.18rem;
+    border-radius: 1rem;
+    font-family: 'san-serif', cursive;
+}
+
+::placeholder {
+    color: var(--light-font-color); 
+    font-family: 'san-serif', cursive;
+    font-size: 1.5rem;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+input[type=number] { -moz-appearance:textfield; }
+
+#checkbox {
+    width: 23rem;
+    display: flex;
+    justify-content: flex-start;
+    gap: 0.7rem;
+    font-family: 'san-serif', cursive;
+    font-size: 1.5rem;
+}
+
+#button-submit {
+    height: 5.5rem;
+    width: 13rem;
+    border: solid whitesmoke 0.15rem;
+    border-radius: 2rem;
+    background-color: var(--button-submit-background-color);
+    font-family: 'san-serif', cursive;
+    font-size: 1.7rem;
+}

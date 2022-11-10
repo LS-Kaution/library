@@ -7,16 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/light-or-dark-mode.css">
+    <link rel="stylesheet" href="style/form-style.css">
+    <link rel="stylesheet" href="style/result-section.css">
     <script type="module" src="script-light-dark-mode.js" defer></script>
-    <title>Kaution's  Library</title>
+    <script type="module" src="main-script.js" defer></script>
+    <title>Kaution's Library</title>
 </head>
 
 <body>
-    
+
     <header>
         <div id="logo">
             <img src="style/logo.png" alt="logo" id="png-logo">
-            <h1>Kaution's  Library</h1>
+            <h1>Kaution's Library</h1>
         </div>
 
         <div id="light-or-dark-mode">
@@ -26,17 +29,55 @@
             </button>
         </div>
 
-        <button id="login-button">Log in</button>
+        <a href="https://www.youtube.com/watch?v=ue9vBU0bjA4" target="_blank">
+            <button type="button" id="login-button">Log in</button>
+        </a>
     </header>
 
     <main>
-        <button class="button-new-book">+ Add new book</button>
+        <div id="div-button-new-book">
+            <button type="button" id="button-new-book">+ Add new book</button>
+        </div>
+
+        <section id="form-section">
+            <form action="#" method="get" id="form">
+
+                <input type="text" name="title" placeholder="Title" id="title" required>
+
+                <input type="text" name="author" placeholder="Author" id="author" required>
+
+                <input type="number" name="pages" placeholder="Pages" id="pages" required>
+
+                <div id="checkbox">
+                    <input type="checkbox" name="check" id="check">
+                    <label for="pages">Read this book?</label>
+                </div>
+
+                <button id="button-submit">Submit</button>
+
+            </form>
+        </section>
+
+        <section id="result-section">
+            <div id="result">
+
+                <p class="p-border"></p>
+                <p class="p-border"></p>
+                <p class="p-border"></p>
+
+                <button id="button-read">Read</button>
+                <button id="button-remove">Remove</button>
+
+            </div>
+        </section>
     </main>
 
     <footer>
         <div id="footer-div">
             <h1>Copyright © 2022 by LS-Kaution</h1>
-            <img src="style/github-logo.png" alt="github-logo-footer" id="github-logo-footer">
+            <a href="https://github.com/lS-Kaution" target="_blank">
+                <img src="style/github-logo.png" alt="github-logo-footer" id="github-logo-footer">
+            </a>
         </div>
     </footer>
 

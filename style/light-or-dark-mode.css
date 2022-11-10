@@ -8,6 +8,6 @@ header.dark-mode {
     color: var(--dark-font-color);
 }
 
-main.dark-mode > button {
+#button-new-book.dark-mode {
     color: var(--dark-font-color);
 }

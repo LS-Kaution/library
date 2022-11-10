@@ -1,0 +1,40 @@
+#result-section {
+    width: 100%;
+    padding: 1rem;
+}
+
+#result {
+    width: 25rem;
+    background-color: aquamarine;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.p-border {
+    width: 15rem;
+    border: solid black 0.2rem;
+}
+
+#button-read {
+    height: 5.5rem;
+    width: 13rem;
+    border: solid whitesmoke 0.15rem;
+    border-radius: 2rem;
+    background-color: var(--button-submit-background-color);
+    font-family: 'san-serif', cursive;
+    font-size: 1.7rem;
+}
+
+#button-remove {
+    height: 5.5rem;
+    width: 13rem;
+    border: solid whitesmoke 0.15rem;
+    border-radius: 2rem;
+    background-color: var(--button-submit-background-color);
+    font-family: 'san-serif', cursive;
+    font-size: 1.7rem;
+}

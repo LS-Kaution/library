@@ -68,7 +68,7 @@ header {
 #login-button {
     margin-right: 5.5rem;
     height: 5rem;
-    width: 28rem;
+    width: 18rem;
     font-family: 'Bebas Neue', cursive;
     font-size: 2rem;
     color: var(--dark-font-color);
@@ -86,10 +86,20 @@ header {
     width: 5rem;
 }
 
-main > button {
+main {
     width: 100%;
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+#div-button-new-book {
+    display: flex;
+    justify-content: center;
+}
+
+#button-new-book {
     padding: 1rem;
     font-family: 'Bebas Neue', cursive;
     font-size: 5rem;
@@ -118,4 +128,10 @@ footer > h1 {
 #github-logo-footer {
     height: 5rem;
     width: 5rem;
+    transition: 0.8s;
+}
+
+#github-logo-footer:hover {
+    transform: rotate(360deg);
+    transition: 0.8s;
 }

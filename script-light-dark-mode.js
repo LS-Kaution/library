@@ -1,10 +1,10 @@
-const bdark = document.getElementById('bdark')
+const bdark = document.querySelector('#bdark')
 const body = document.querySelector('body')
 const header = document.querySelector('header')
-const main = document.querySelector('main')
+const mainButton = document.querySelector('#button-new-book')
 
 bdark.addEventListener('click', function(){
     body.classList.toggle('dark-mode')
     header.classList.toggle('dark-mode')
-    main.classList.toggle('dark-mode')
+    mainButton.classList.toggle('dark-mode')
 })
