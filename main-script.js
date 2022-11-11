@@ -4,49 +4,54 @@ form.style.display = 'none'
 const container = document.querySelector('#result-section')
 container.style.display = 'none'
 
-
 const buttonNewBook = document.querySelector('#button-new-book')
 buttonNewBook.addEventListener('click', function callForm() {
     form.style.display = 'flex'     
 })
 
-
 const buttonSubmit = document.querySelector('#form')
 buttonSubmit.addEventListener('submit', showInput)
 
+buttonSubmit.onsubmit = (ev) => {
+    ev.preventDefault();
+}
+
 function showInput(event) {
     
-    function preventDefault(ev){
-        let event = ev | window.event;
-        if(event.preventDefault){
-            event.preventDefault();
-        }else{
-            event.returnValue = false;
-        }
-    }
-
     let inputTitle = document.querySelector('#title').value;
     let inputAuthor = document.querySelector('#author').value;
     let inputPages = document.querySelector('#pages').value;
     let inputCheck = document.querySelector('#check').checked;
 
-    let newBook = new Data(inputTitle, inputAuthor, inputPages)
+    let newBook = new Data(inputTitle, inputAuthor, inputPages, inputCheck)
 }
 
-function Data(title, author, pages) {
+function Data(title, author, pages, check) {
     this.title = title;
     this.author = author;
     this.pages = pages;
+    this.check = check;
 
     const titleContainer = document.querySelector('#title-container')
-    titleContainer.textContent = title
+    titleContainer.textContent = this.title
 
     const authorContainer = document.querySelector('#author-container')
-    authorContainer.textContent = author
+    authorContainer.textContent = this.author
 
     const pagesContainer = document.querySelector('#pages-container')
-    pagesContainer.textContent = pages 
-    
+    pagesContainer.textContent = this.pages 
+
+    const buttonRead = document.querySelector('#button-read')
+      
+    if(this.check === true){
+        buttonRead.textContent = 'Read'
+    }
+
+    else{
+        buttonRead.textContent = 'Unread'
+        buttonRead.classList.toggle('unread')
+    }
+
     form.style.display = 'none'
     container.style.display = 'flex'
 }
